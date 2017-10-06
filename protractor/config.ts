@@ -2,7 +2,7 @@ import { browser, Config } from 'protractor';
 
 export const config: Config = {
  framework: 'jasmine',
- seleniumAddress: 'http://localhost:4444/wd/hub',
+ SELENIUM_PROMISE_MANAGER: false,
  specs: ['../test/Google.spec.js'],
  noGlobals: true,
  onPrepare: () => {

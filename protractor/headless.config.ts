@@ -7,5 +7,11 @@ export const config: Config = {
   noGlobals: true,
   onPrepare: () => {
     browser.ignoreSynchronization = true;
+  },
+  capabilities: {
+    browserName: 'chrome',
+    chromeOptions: {
+      args: ['--headless', '--disable-gpu', '--window-size=800,600']
+    }
   }
 }

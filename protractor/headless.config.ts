@@ -3,7 +3,7 @@ import { browser, Config } from 'protractor';
 export const config: Config = {
   framework: 'jasmine',
   SELENIUM_PROMISE_MANAGER: false,
-  specs: ['../test/Google.spec.js'],
+  specs: ['../test/**/*.spec.js'],
   noGlobals: true,
   onPrepare: () => {
     browser.ignoreSynchronization = true;
@@ -13,5 +13,6 @@ export const config: Config = {
     chromeOptions: {
       args: ['--headless', '--disable-gpu', '--window-size=800,600']
     }
-  }
+  },
+  getPageTimeout: 1000
 };

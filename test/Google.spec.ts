@@ -10,4 +10,4 @@ describe('Given a SDET learning protractor', () => {
       await expect(browser.getTitle()).toEqual('Google');
     });
   });
-})
+});

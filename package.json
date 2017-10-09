@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/cgomezb/protractor-workshop-2017#readme",
   "dependencies": {
-    "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.1.2"
   },
   "devDependencies": {
     "@types/jasminewd2": "^2.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
     "typescript": "^2.5.3"
   }
 }

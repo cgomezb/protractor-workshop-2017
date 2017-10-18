@@ -31,23 +31,14 @@ describe('Buy a t-shirt', () => {
   it('then should be bought a t-shirt', async () => {
     await browser.get(url);
     await menuContentPage.goToTShirtMenu();
-    await (browser.sleep(3000));
     await orderResumePage.goToSelectedItem();
-    await (browser.sleep(4500));
     await productDetailPage.goToAddToCar();
-    await (browser.sleep(3000));
     await productAddedModalPage.goToCheckOut();
-    await (browser.sleep(4500));
     await summaryStepPage.goToProceedToCheckOut();
-    await (browser.sleep(3000));
     await signInStepPage.signIn(emailAddress, password);
-    await (browser.sleep(3000));
     await addressStepPage.goToConfirmAddress();
-    await (browser.sleep(3000));
     await shippingStepPage.goToAgreeTermsOfService();
-    await (browser.sleep(3000));
     await paymentStepPage.goToPayment();
-    await (browser.sleep(3000));
     await bankPaymentPage.goToConfirmOrder();
     await expect(productListPage.getResultTextOrder()).toBe(resultMessage);
   });
